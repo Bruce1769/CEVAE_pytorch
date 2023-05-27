@@ -80,7 +80,9 @@ class p_y_zt(nn.Module):
         self.dim_out = dim_out
 
         # Separated forwards for different t values, TAR
-
+        
+        # what is the difference between the following two parts？
+        
         self.input_t0 = nn.Linear(dim_in, dim_h)
         # loop through dimensions to create fully con. hidden layers, add params with ModuleList
         self.hidden_t0 = nn.ModuleList([nn.Linear(dim_h, dim_h) for _ in range(nh)])
